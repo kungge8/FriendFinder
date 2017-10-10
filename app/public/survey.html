@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Survey!</h1>
+			<hr>
+			<form>
+				<h3>About you!</h3>
+				<label for="name">Name:</label>
+				<input id="namefield" name="name" type="text" class="form-control" placeholder="What's your name?">
+				<br>
+				<label for="name">Give us a picture of yourself!:</label>
+				<input id="imgfield" name="img" type="text" class="form-control" placeholder="Image URL">
+				<hr>
+				
+				<div>
+					<h4>Question 1</h4>
+					<p>I like long walks on the beach.</p>
+					<select id="q1">	
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 2</h4>
+					<p>I keep my head cool in stressful situations</p>
+					<select id="q2">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 3</h4>
+					<p>I like eating potatoes</p>
+					<select id="q3">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 4</h4>
+					<p>I am very sure of my ability to pronounce Vaðlaheiðarvegavinnuverkfærageymsluskúraútidyralyklakippuhringur</p>
+					<select id="q4">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 5</h4>
+					<p>Faker is the one and only.</p>
+					<select id="q5">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 6</h4>
+					<p>Water tastes good.</p>
+					<select id="q6">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 7</h4>
+					<p>I am allergic to peanuts.</p>
+					<select id="q7">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 8</h4>
+					<p>The weather is an interesting topic to discuss.</p>
+					<select id="q8">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 9</h4>
+					<p>I own many apple products.</p>
+					<select id="q9">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+
+				<div>
+					<h4>Question 10</h4>
+					<p>Sup.</p>
+					<select id="q10">
+						<option value=1>1-Strongly Disagree</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5-Strongly Agree</option>
+					</select>
+				</div>
+				
+				<div id="resultsModal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h2 class="modal-title"><strong>Best Match</strong></h2>
+				      </div>
+				      <div class="modal-body">
+				        <h2 id="matchName"></h2>
+				        <img id="matchImg" alt="http://via.placeholder.com/350x150">
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>
+				<input id="s" type="submit">
+			</form>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#s").on("click", function(e){
+					e.preventDefault();
+
+					if (!$('#namefield').val()){
+						return alert("Fill in your name!");
+					} else if (!$('#imgfield').val()){
+						return alert("Give us a picture of yourself!");
+					} else {
+
+						let newUser = {
+							name: $('#namefield').val(),
+							img: $('#imgfield').val(),
+							scores: [$('#q1').val(),
+											$('#q2').val(),
+											$('#q3').val(),
+											$('#q4').val(),
+											$('#q5').val(),
+											$('#q6').val(),
+											$('#q7').val(),
+											$('#q8').val(),
+											$('#q9').val(),
+											$('#q10').val()]
+						}
+
+						$.post("/api/friends", newUser, function(data){
+							$('#matchName').text(data.name);
+							$('#matchImg').attr('src', data.photo);
+							$('#resultsModal').modal('toggle');
+						});
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
